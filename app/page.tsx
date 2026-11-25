@@ -5,8 +5,14 @@ import { ProductGrid } from '../components/content';
 import { Closing, Faq, FocusAreas, Journey, LatestUpdates, Philosophy, ProductEditorial, SectionTitle, TaqwaSpotlight } from '../components/editorial';
 import { apps } from '../data/site';
 import { studioFaq } from '../data/editorial';
+import { pageMetadata } from '../components/seo';
 
-export const metadata = { alternates: { canonical: '/' } };
+export const metadata = pageMetadata({
+  title: 'Uxhan Forge | Independent App & Game Studio',
+  description:
+    'Independent mobile apps and playful puzzle games from Uxhan Forge, co-founded by Muhammad Umer Farooq and Muhammad Burhan Yousaf.',
+  path: '/',
+});
 
 export default function Home() {
   return <>

@@ -10,21 +10,22 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "lucide-react": "*",
     "next": "^16",
     "react": "^19",
     "react-dom": "^19",
-    "lucide-react": "*",
     "three": "^0.183"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.183",
     "eslint": "^9",
     "eslint-config-next": "^16",
+    "lighthouse": "^13.6.0",
     "tailwindcss": "^4",
-    "@tailwindcss/postcss": "^4"
+    "typescript": "^5"
   }
 }

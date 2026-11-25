@@ -1,12 +1,34 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { apps, support } from '../data/site';
+import { founders, studioStatement } from '../data/founders';
 import { Closing, Faq, FocusAreas, Journey, Philosophy, SectionTitle } from './editorial';
 import { ProductGrid } from './content';
+import { Breadcrumbs, pageMetadata } from './seo';
 
 export function AboutContent() {
   return <>
-    <section className="editorial-section studio-introduction"><div><SectionTitle eyebrow="The studio" title="Curiosity, shaped into something useful." /><p>Uxhan Forge is an independent mobile app and game studio. Our work brings together two interests: helping people make room for meaningful routines and finding enjoyment in a well-made puzzle.</p><p>Taqwa Habit, UXBLOX and RailBop explore those interests in different ways. Each begins with an interaction people can understand and return to.</p></div><aside className="studio-note glass"><p className="eyebrow">Our mission</p><h3>Make the small interactions count.</h3><p>A product can become part of someone’s day through a simple action that feels clear, useful or satisfying. That is where we put our attention.</p></aside></section>
+    <nav className="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <Link href="/">Home</Link>
+        </li>
+        <li style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <span aria-hidden="true" style={{ margin: '0 6px', color: 'var(--muted)' }}>&rsaquo;</span>
+          <Link href="/about" aria-current="page">About</Link>
+        </li>
+      </ol>
+    </nav>
+    <section className="editorial-section studio-introduction"><div><SectionTitle eyebrow="The studio" title="Curiosity, shaped into something useful." /><p>{studioStatement}</p><p>Taqwa Habit, UXBLOX and RailBop explore those interests in different ways. Each begins with an interaction people can understand and return to.</p></div><aside className="studio-note glass"><p className="eyebrow">Our mission</p><h3>Make the small interactions count.</h3><p>A product can become part of someone’s day through a simple action that feels clear, useful or satisfying. That is where we put our attention.</p></aside></section>
+    <section className="editorial-section" id="founders"><SectionTitle eyebrow="Our Co-Founders" title="The people behind Uxhan Forge." /><p>{studioStatement}</p><div className="founder-grid">{founders.map(founder => <article key={founder.id} className="founder-card panel glass"><h3>{founder.name}</h3><p className="founder-role">{founder.role}</p><p>{founder.name} co-founded Uxhan Forge, an independent software, mobile application, and game development studio building thoughtful mobile apps and playful puzzle games.</p><div className="actions" style={{ marginTop: 14 }}><Link className="text-link" href={'/founders/' + founder.id}>View profile <ArrowRight size={15} /></Link></div></article>)}</div></section>
+    <section className="editorial-section"><SectionTitle eyebrow="About the studio" title="Frequently asked questions" /><Faq items={[
+      { question: 'What is Uxhan Forge?', answer: 'Uxhan Forge is an independent software, mobile application, and game development studio co-founded by Muhammad Umer Farooq and Muhammad Burhan Yousaf. We build thoughtful mobile apps and playful puzzle games.' },
+      { question: 'Who founded Uxhan Forge?', answer: 'Muhammad Umer Farooq and Muhammad Burhan Yousaf are the co-founders of Uxhan Forge.' },
+      { question: 'Who are the co-founders of Uxhan Forge?', answer: 'Muhammad Umer Farooq and Muhammad Burhan Yousaf are the co-founders of Uxhan Forge.' },
+      { question: 'Who is Muhammad Umer Farooq?', answer: 'Muhammad Umer Farooq is a co-founder of Uxhan Forge, an independent software, mobile application, and game development studio.' },
+      { question: 'Who is Muhammad Burhan Yousaf?', answer: 'Muhammad Burhan Yousaf is a co-founder of Uxhan Forge, an independent software, mobile application, and game development studio.' },
+      { question: 'What applications and games does Uxhan Forge develop?', answer: 'Uxhan Forge develops Taqwa Habit, an Islamic habit-tracking app available on Google Play, along with two upcoming puzzle games: UXBLOX, a block-placement puzzle, and RailBop, a railway-connection puzzle.' },
+    ]} /></section>
     <section className="editorial-section"><SectionTitle eyebrow="Our focus" title="Applications with purpose. Games with a point of view." /><FocusAreas /></section>
     <section className="editorial-section"><Philosophy /></section>
     <section className="editorial-section editorial-split"><div><h2>Why apps and games?</h2><p>An app and a puzzle ask different things of a person’s attention. One can help organize a routine. The other invites someone to pause and think.</p></div><div><p>Both depend on clear choices, reliable feedback and a reason to return. Working across these formats gives us different ways to explore the same questions about usability and enjoyment.</p><p>We want each product to earn its place through how it works in someone’s hands.</p></div></section>

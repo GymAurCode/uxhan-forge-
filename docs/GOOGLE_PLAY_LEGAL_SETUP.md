@@ -6,9 +6,9 @@ Reviewed November 19, 2026 against local source. These URLs are implemented in t
 
 | App | Privacy | Terms | Account and data deletion |
 | --- | --- | --- | --- |
-| Taqwa Habit | https://uxhan-forge.vercel.app/apps/taqwa-habit/privacy-policy | https://uxhan-forge.vercel.app/apps/taqwa-habit/terms | https://uxhan-forge.vercel.app/apps/taqwa-habit/delete-account |
-| UXBLOX | https://uxhan-forge.vercel.app/apps/uxblox/privacy-policy | https://uxhan-forge.vercel.app/apps/uxblox/terms | https://uxhan-forge.vercel.app/apps/uxblox/delete-account |
-| RailBop | https://uxhan-forge.vercel.app/apps/railbop/privacy-policy | https://uxhan-forge.vercel.app/apps/railbop/terms | https://uxhan-forge.vercel.app/apps/railbop/delete-account |
+| Taqwa Habit | https://uxhanforge.vercel.app/apps/taqwa-habit/privacy-policy | https://uxhanforge.vercel.app/apps/taqwa-habit/terms | https://uxhanforge.vercel.app/apps/taqwa-habit/delete-account |
+| UXBLOX | https://uxhanforge.vercel.app/apps/uxblox/privacy-policy | https://uxhanforge.vercel.app/apps/uxblox/terms | https://uxhanforge.vercel.app/apps/uxblox/delete-account |
+| RailBop | https://uxhanforge.vercel.app/apps/railbop/privacy-policy | https://uxhanforge.vercel.app/apps/railbop/terms | https://uxhanforge.vercel.app/apps/railbop/delete-account |
 
 Existing /privacy-policy, /terms, /delete-account and /support remain available. The privacy and deletion company URLs retain Taqwa Habit information and link to each app's documents.
 

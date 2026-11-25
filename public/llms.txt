@@ -1,0 +1,34 @@
+# Uxhan Forge
+
+Uxhan Forge is an independent software, mobile application, and game development studio co-founded by Muhammad Umer Farooq and Muhammad Burhan Yousaf.
+
+## Co-founders
+
+- Muhammad Umer Farooq — Co-Founder — https://uxhanforge.vercel.app/founders/muhammad-umer-farooq
+- Muhammad Burhan Yousaf — Co-Founder — https://uxhanforge.vercel.app/founders/muhammad-burhan-yousaf
+
+## Products
+
+- Taqwa Habit — Islamic habit-tracking app, available on Google Play — https://uxhanforge.vercel.app/apps/taqwa-habit — https://play.google.com/store/apps/details?id=com.taqwahabit.app
+- UXBLOX — upcoming block-placement puzzle game — https://uxhanforge.vercel.app/apps/uxblox
+- RailBop — upcoming train-track puzzle game — https://uxhanforge.vercel.app/apps/railbop
+
+## Public pages
+
+- Home — https://uxhanforge.vercel.app/
+- Apps — https://uxhanforge.vercel.app/apps
+- About — https://uxhanforge.vercel.app/about
+- Our Co-Founders — https://uxhanforge.vercel.app/about#founders
+- Muhammad Umer Farooq — https://uxhanforge.vercel.app/founders/muhammad-umer-farooq
+- Muhammad Burhan Yousaf — https://uxhanforge.vercel.app/founders/muhammad-burhan-yousaf
+- Updates — https://uxhanforge.vercel.app/updates
+- Contact — https://uxhanforge.vercel.app/contact
+- Support — https://uxhanforge.vercel.app/support
+- Privacy policy — https://uxhanforge.vercel.app/privacy-policy
+- Terms — https://uxhanforge.vercel.app/terms
+- Delete account — https://uxhanforge.vercel.app/delete-account
+
+## Contact
+
+- Studio inquiries: uxhanforge@gmail.com
+- Product support: uxhanforge.support@gmail.com

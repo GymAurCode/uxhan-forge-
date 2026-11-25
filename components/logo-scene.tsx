@@ -6,6 +6,16 @@ import { useEffect, useRef, useState } from 'react';
 export function LogoScene() {
   const stage = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [loadResolved, setLoadResolved] = useState(false);
+  useEffect(() => {
+    const done = () => setLoadResolved(true);
+    if (document.readyState === 'complete') {
+      done();
+    } else {
+      window.addEventListener('load', done, { once: true });
+      return () => window.removeEventListener('load', done);
+    }
+  }, []);
   useEffect(() => {
     const host = stage.current;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -114,16 +124,16 @@ export function LogoScene() {
     let cancelLaunch = () => {};
     const gate = new IntersectionObserver(([entry]) => {
       cancelLaunch();
-      if (!entry.isIntersecting) return;
+      if (!entry.isIntersecting || !loadResolved) return;
       const start = () => {
         gate.disconnect();
         launch().catch(() => stop());
       };
       if ('requestIdleCallback' in window) {
-        const idle = window.requestIdleCallback(start, { timeout: 1400 });
+        const idle = window.requestIdleCallback(() => setTimeout(start, 3000), { timeout: 2500 });
         cancelLaunch = () => window.cancelIdleCallback(idle);
       } else {
-        const timer = setTimeout(start, 120);
+        const timer = setTimeout(() => setTimeout(start, 3000), 1400);
         cancelLaunch = () => clearTimeout(timer);
       }
     });
@@ -134,7 +144,7 @@ export function LogoScene() {
       cancelLaunch();
       stop();
     };
-  }, []);
+  }, [loadResolved]);
   return <div className="logo-stage" data-ready={ready}>
     <div className="orbit orbit-a" /><div className="orbit orbit-b" />
     <Image className="logo-fallback" src="/brand/Logo.png" alt="Uxhan Forge" fill sizes="(max-width: 460px) 70vw, (max-width: 760px) 335px, (max-width: 1250px) 42vw, 540px" priority />

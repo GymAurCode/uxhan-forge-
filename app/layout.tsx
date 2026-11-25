@@ -1,16 +1,19 @@
-import type { Viewport } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Header } from '../components/chrome';
 import { Footer } from '../components/footer';
 import { domain } from '../data/site';
+import { organizationJsonLd, websiteJsonLd, StructuredData, imageUrl } from '../components/seo';
 import './globals.css';
 import { OrganicLiquidBackground } from '../components/organic-liquid-background';
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(domain),
   title: { default: 'Uxhan Forge | Independent App & Game Studio', template: '%s | Uxhan Forge' },
-  description: 'Thoughtful mobile apps and playful puzzle games from Uxhan Forge.',
+  description:
+    'Independent mobile apps and playful puzzle games from Uxhan Forge, an independent software, mobile application, and game development studio co-founded by Muhammad Umer Farooq and Muhammad Burhan Yousaf.',
   icons: { icon: '/brand/Logo.png', apple: '/brand/Logo.png' },
-  openGraph: { siteName: 'Uxhan Forge', images: ['/brand/Logo.png'] },
+  openGraph: { siteName: 'Uxhan Forge', images: [{ url: imageUrl, width: 540, height: 540 }] },
+  twitter: { card: 'summary_large_image' },
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
 
@@ -24,6 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </head>
     <body suppressHydrationWarning>
+      <StructuredData data={[organizationJsonLd(), websiteJsonLd()]} />
       <OrganicLiquidBackground />
       <a className="skip" href="#main">Skip to content</a>
       <Header />

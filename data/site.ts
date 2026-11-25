@@ -1,4 +1,4 @@
-﻿export const domain = 'https://uxhan-forge.vercel.app';
+﻿export const domain = 'https://uxhanforge.vercel.app';
 export const contact = 'uxhanforge@gmail.com';
 export const support = 'uxhanforge.support@gmail.com';
 export const play = 'https://play.google.com/store/apps/details?id=com.taqwahabit.app';
